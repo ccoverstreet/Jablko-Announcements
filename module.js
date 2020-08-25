@@ -14,7 +14,7 @@ const module_name = path.basename(__dirname);
 module.exports.permission_level = 1;
 
 module.exports.generate_card = async () => {
-	return (await fs.readFile(`${__dirname}/announcements.html`, "utf8")).replace("$MODULE_NAME", module_name);
+	return (await fs.readFile(`${__dirname}/announcements.html`, "utf8")).replace(/\$MODULE_NAME/g, module_name);
 }
 
 module.exports.send_announcement = async (req, res) => {
