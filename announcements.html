@@ -1,7 +1,7 @@
 <script> 
-	const announcements = {
+	const $MODULE_NAME = {
 		send_message: async function() {
-			const input_box = document.getElementById("announcements_input");
+			const input_box = document.getElementById("$MODULE_NAME_input");
 			const message_text = input_box.value;
 			input_box.value = "";
 
@@ -25,7 +25,7 @@
 		}
 	}
 </script>
-<div id="announcements" class="module_card" style="padding-bottom: 10px">
+<div id="$MODULE_NAME" class="module_card" style="padding-bottom: 10px">
 	<div class="module_header">
 		<h1>Announcements</h1>
 		<svg class="module_icon" viewBox="0 0 150 150">
@@ -36,7 +36,7 @@
 	</div>
 	<hr>
 	<div style="display: grid; grid-template-columns: 80% 20%;">
-		<input id="announcements_input" style="margin-right: 10px; margin-left: 10px">
-		<button onclick="announcements.send_message()" style="background-color: #44bd32; color: #f5f6fa; margin-right: 10px; margin-left: 10px;">Send</button>
+		<input id="$MODULE_NAME_input" style="margin-right: 10px; margin-left: 10px">
+		<button onclick="$MODULE_NAME.send_message()" style="background-color: #44bd32; color: #f5f6fa; margin-right: 10px; margin-left: 10px;">Send</button>
 	</div>
 </div>
