@@ -7,7 +7,7 @@
 const fs = require("fs").promises;
 const path = require("path");
 
-const messaging_system = require("../../jablko_interface.js").messaging_system;
+const messaging_system = require(module.parent.filename).messaging_system;
 
 const module_name = path.basename(__dirname);
 
